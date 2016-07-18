@@ -1,6 +1,6 @@
 {
   "name": "erdmannfreunde/euf_overlay",
-  "description": "Contao Extension to add an overlay to a webpage. This is useful, if you want to increase an e-mail subscriptions, get more followers or shares.",
+  "description": "Contao Extension to add an overlay to a webpage. This is useful, if you want to increase your e-mail subscriptions, get more followers or shares.",
   "keywords": ["contao", "overlay", "euf_overlay", "popup", "popover", "Layer", "Campaign"],
   "type": "contao-module",
   "homepage": "https://github.com/ErdmannFreunde/euf_overlay",
