@@ -1,0 +1,56 @@
+
+/**
+ * Contao Open Source CMS
+ *
+ * Copyright (c) 2005-2016 Leo Feyer
+ *
+ * @package   EuF-Overlay
+ * @author    Sebastian Buck
+ * @license   LGPL
+ * @copyright Erdmann & Freunde
+ */
+
+.euf_overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.euf_overlay__content {
+  max-width: 400px;
+  width: 100%;
+  padding: 2em;
+  margin: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+
+  position: absolute;
+  margin: auto;
+
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  background: #fff;
+  color: #000;
+}
+
+.euf_overlay__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.euf_overlay__close:hover {
+  opacity: 0.5;
+}
