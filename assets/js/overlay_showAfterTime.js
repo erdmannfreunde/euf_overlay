@@ -10,7 +10,7 @@
 * @copyright Erdmann & Freunde
 */
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
   /**
     * Funktionen für Cookies setzen, auslesen und löschen
     * Source: http://www.quirksmode.org/js/cookies.html#script
