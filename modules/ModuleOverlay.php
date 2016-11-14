@@ -44,13 +44,13 @@ class ModuleOverlay extends \Module
 		// jQuery einbinden zum einblenden und schließen des Overlays
 		switch ($this->overlay_loadingTime) {
 			case 'onLeave':
-				$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/euf_overlay/assets/js/overlay_showOnExit.js|static';
+				$GLOBALS['TL_BODY'][] = 'system/modules/euf_overlay/assets/js/overlay_showOnExit.js|static';
 				break;
 			case 'onLoad':
-				$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/euf_overlay/assets/js/overlay_showOnPageLoad.js|static';
+				$GLOBALS['TL_BODY'][] = 'system/modules/euf_overlay/assets/js/overlay_showOnPageLoad.js|static';
 				break;
 			case 'afterTime':
-				$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/euf_overlay/assets/js/overlay_showAfterTime.js|static';
+				$GLOBALS['TL_BODY'][] = 'system/modules/euf_overlay/assets/js/overlay_showAfterTime.js|static';
 				$this->Template->data_delay = $this->overlay_delay;
 				break;
 		}
