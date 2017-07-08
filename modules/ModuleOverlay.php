@@ -53,6 +53,10 @@ class ModuleOverlay extends \Module
 				$GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterTime.js"></script>"';
 				$this->Template->data_delay = $this->overlay_delay;
 				break;
+      case 'afterScroll':
+				$GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterScroll.js"></script>"';
+				$this->Template->data_percent = $this->overlay_percent;
+				break;
 		}
 
 		$this->Template->data_expires = $this->overlay_cookie_expires;
