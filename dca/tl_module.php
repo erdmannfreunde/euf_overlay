@@ -64,10 +64,10 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_loadingTime'] = array (
     'default'                 => 'onLeave',
     'exclude'                 => true,
     'inputType'               => 'radio',
-    'options'                 => array('onLeave', 'onLoad', 'afterTime'),
+    'options'                 => array('onLeave', 'onLoad', 'afterTime', 'afterScroll'),
     'eval'                    => array('tl_class'=>'w50 m12', 'mandatory'=>true, 'submitOnChange'=>true),
     'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-    'sql'                     => "varchar(10) NOT NULL default ''"
+    'sql'                     => "varchar(20) NOT NULL default ''"
   );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_delay'] = array (
