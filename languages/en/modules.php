@@ -32,5 +32,5 @@ $GLOBALS['TL_LANG']['tl_module']['overlay_richtext'] = array('Richtext-Content',
 $GLOBALS['TL_LANG']['tl_module']['overlay_html'] = array('HTML-Content','Add your message and style it via HTML.');
 $GLOBALS['TL_LANG']['tl_module']['overlay_loadingTime'] = array('Loading Time','Specify the time when the overlay should appear.');
 $GLOBALS['TL_LANG']['tl_module']['overlay_delay'] = array('Waiting period (in s)','Specify the time in seconds, when the overlay should appear');
+$GLOBALS['TL_LANG']['tl_module']['overlay_percent'] = array('Scrolling distance (in %)','Specify after what scrolling distance the overlay should appear');
 $GLOBALS['TL_LANG']['tl_module']['overlay_cookie_expires'] = array('Cookie Expiration (in Days)','When the overlay is closed, a cookie will be set. You can choose, when the cookie will be deleted.');
-

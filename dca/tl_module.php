@@ -35,6 +35,7 @@
    * Subpalettes
    */
    $GLOBALS['TL_DCA']['tl_module']['subpalettes']['overlay_loadingTime_afterTime'] = 'overlay_delay';
+   $GLOBALS['TL_DCA']['tl_module']['subpalettes']['overlay_loadingTime_afterScroll'] = 'overlay_percent';
 
  /*
   * Fields
@@ -78,6 +79,15 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_delay'] = array (
     'eval'                    => array('rgxp'=>'natural', 'mandatory'=>true, 'tl_class'=>'w50'),
     'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
   );
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['overlay_percent'] = array (
+  'label'                   => &$GLOBALS['TL_LANG']['tl_module']['overlay_percent'],
+  'default'                 => 40,
+  'exclude'                 => true,
+  'inputType'               => 'text',
+  'eval'                    => array('rgxp'=>'natural', 'mandatory'=>true, 'tl_class'=>'w50', 'maxval'=>'100'),
+  'sql'                     => "smallint(3) unsigned NOT NULL default '0'"
+);
 
 
   $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_cookie_expires'] = array (
