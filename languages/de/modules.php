@@ -1,10 +1,6 @@
 <?php
 
 /**
- * Contao Open Source CMS
- *
- * Copyright (c) 2005-2016 Leo Feyer
- *
  * @package   EuF-Overlay
  * @author    Sebastian Buck
  * @license   LGPL
@@ -23,7 +19,6 @@ $GLOBALS['TL_LANG']['FMD']['euf_overlay'] = array('EuF-Overlay', 'Legen Sie ein 
 $GLOBALS['TL_LANG']['tl_module']['overlay_richtext_legend'] = "Overlay-Inhalt: Richtext";
 $GLOBALS['TL_LANG']['tl_module']['overlay_html_legend'] = "Overlay-Inhalt: HTML";
 $GLOBALS['TL_LANG']['tl_module']['overlay_settings_legend'] = "Overlay-Einstellungen";
-
 
 /**
  * Fields
