@@ -20,7 +20,7 @@
     {title_legend},name,headline,type;
     {overlay_richtext_legend},overlay_richtext;
     {overlay_html_legend:hide},overlay_html;
-    {overlay_settings_legend:hide},overlay_loadingTime,overlay_cookie_expires;
+    {overlay_settings_legend},overlay_loadingTime,overlay_cookie_expires;
     {expert_legend:hide},cssID
     ';
 
