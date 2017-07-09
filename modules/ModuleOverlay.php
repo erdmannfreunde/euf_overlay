@@ -25,29 +25,29 @@ class ModuleOverlay extends \Module
   protected $strTemplate = 'mod_overlay';
 
   /**
-	 * Display a wildcard in the back end
-	 */
-	public function generate()
-	{
-		if (TL_MODE == 'BE')
-		{
-			$objTemplate = new \BackendTemplate('be_wildcard');
+   * Display a wildcard in the back end
+   */
+  public function generate()
+  {
+    if (TL_MODE == 'BE')
+    {
+      $objTemplate = new \BackendTemplate('be_wildcard');
 
-			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['euf_overlay'][0]) . ' ###';
-			$objTemplate->id = $this->id;
-			$objTemplate->link = $this->name;
-			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+      $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['euf_overlay'][0]) . ' ###';
+      $objTemplate->id = $this->id;
+      $objTemplate->link = $this->name;
+      $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
-			return $objTemplate->parse();
-		}
+      return $objTemplate->parse();
+    }
 
     if(TL_MODE == 'FE')
     {
       $GLOBALS['TL_CSS'][] = 'system/modules/wbd_user_info/assets/css/overlay.css|static';
     }
 
-		return parent::generate();
-	}
+    return parent::generate();
+  }
 
 
   /**
@@ -62,14 +62,14 @@ class ModuleOverlay extends \Module
         $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showOnExit.js"></script>';
         break;
       case 'onLoad':
-        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showOnPageLoad.js"></script>"';
+        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showOnPageLoad.js"></script>';
         break;
       case 'afterTime':
-        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterTime.js"></script>"';
+        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterTime.js"></script>';
         $this->Template->data_delay = $this->overlay_delay;
         break;
       case 'afterScroll':
-        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterScroll.js"></script>"';
+        $GLOBALS['TL_BODY'][] = '<script src="system/modules/euf_overlay/assets/js/overlay_showAfterScroll.js"></script>';
         $this->Template->data_percent = $this->overlay_percent;
         break;
     }
