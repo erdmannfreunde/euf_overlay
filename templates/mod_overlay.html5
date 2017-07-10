@@ -7,10 +7,14 @@
 
 ?>
 
-<div id="euf_overlay" class="euf_overlay" <?php if ($this->data_delay): ?>data-delay="<?php echo $this->data_delay ?>"<?php endif ?> <?php if ($this->data_expires): ?>data-expires="<?php echo $this->data_expires ?>"<?php endif ?>>
-  <div class="euf_overlay__content <?php echo $this->class ?> block" <?php echo $this->cssID ?>>
+<div id='euf_overlay' class='euf_overlay'
+  <?php if ($this->data_delay): ?>data-delay='<?php echo $this->data_delay ?>'<?php endif ?>
+  <?php if ($this->data_percent): ?>data-percent='<?php echo $this->data_percent ?>'<?php endif ?>
+  <?php if ($this->data_expires): ?>data-expires='<?php echo $this->data_expires ?>'<?php endif ?>
+  >
+  <div class='euf_overlay__content <?php echo $this->class ?> block' <?php echo $this->cssID ?>>
 
-    <button class="euf_overlay__close">
+    <button class='euf_overlay__close'>
       &times;
     </button>
 

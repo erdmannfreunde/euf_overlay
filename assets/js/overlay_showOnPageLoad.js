@@ -1,16 +1,12 @@
 
 /**
-* Contao Open Source CMS
-*
-* Copyright (c) 2005-2016 Leo Feyer
-*
-* @package   EuF-Overlay
-* @author    Sebastian Buck
-* @license   LGPL
-* @copyright Erdmann & Freunde
-*/
+ * @package   EuF-Overlay
+ * @author    Sebastian Buck
+ * @license   LGPL
+ * @copyright Erdmann & Freunde
+ */
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
   /**
     * Funktionen für Cookies setzen, auslesen und löschen
     * Source: http://www.quirksmode.org/js/cookies.html#script
@@ -67,7 +63,7 @@ $(document).ready(function() {
 
       // Cookie-Lebenszeit auslesen
       var expires = $("#euf_overlay").data("expires");
-      
+
       // Ausblenden
       $("#euf_overlay").toggle();
       // Cookiesetzen bei CLose
