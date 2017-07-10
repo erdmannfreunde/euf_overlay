@@ -41,7 +41,8 @@ jQuery(document).ready(function() {
 
 
   // Cookie initial abfragen
-  if(!readCookie('euf_overlay_closed')) {
+  var intID = $("#euf_overlay").data("moduleid");
+  if(!readCookie('euf_overlay_closed_'+intID)) {
 
     // Overlay einblenden
     $("#euf_overlay").fadeIn();
@@ -63,11 +64,12 @@ jQuery(document).ready(function() {
 
       // Cookie-Lebenszeit auslesen
       var expires = $("#euf_overlay").data("expires");
+      var intID = $("#euf_overlay").data("moduleid");
 
       // Ausblenden
       $("#euf_overlay").toggle();
       // Cookiesetzen bei CLose
-      createCookie('euf_overlay_closed', '1', expires);
+      createCookie('euf_overlay_closed_'+intID, '1', expires);
     }
   }
 

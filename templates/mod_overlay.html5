@@ -7,7 +7,7 @@
 
 ?>
 
-<div id='euf_overlay' class='euf_overlay'
+<div id='euf_overlay' class='euf_overlay' data-moduleid='<?php echo $this->id ?>'
   <?php if ($this->data_delay): ?>data-delay='<?php echo $this->data_delay ?>'<?php endif ?>
   <?php if ($this->data_percent): ?>data-percent='<?php echo $this->data_percent ?>'<?php endif ?>
   <?php if ($this->data_expires): ?>data-expires='<?php echo $this->data_expires ?>'<?php endif ?>
