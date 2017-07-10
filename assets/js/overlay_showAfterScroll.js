@@ -46,10 +46,15 @@ jQuery(document).ready(function() {
 
     // Overlay nach Scrollen einblenden
     $(window).scroll(function (event) {
-        var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 
-        if(scrollPercent > triggerPercent) {
-          $("#euf_overlay").fadeIn();
+
+        if(!readCookie('euf_overlay_closed')) {
+          var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+
+          if(scrollPercent > triggerPercent) {
+            $("#euf_overlay").fadeIn();
+          }
+
         }
 
     });

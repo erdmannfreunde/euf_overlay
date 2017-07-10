@@ -43,7 +43,7 @@ class ModuleOverlay extends \Module
 
     if(TL_MODE == 'FE')
     {
-      $GLOBALS['TL_CSS'][] = 'system/modules/wbd_user_info/assets/css/overlay.css|static';
+      $GLOBALS['TL_CSS'][] = 'system/modules/euf_overlay/assets/css/overlay_default.css|static';
     }
 
     return parent::generate();

@@ -58,7 +58,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_loadingTime'] = array (
   'exclude'                 => true,
   'inputType'               => 'radio',
   'options'                 => array('onLeave', 'onLoad', 'afterTime', 'afterScroll'),
-  'eval'                    => array('tl_class'=>'w50 m12', 'mandatory'=>true, 'submitOnChange'=>true),
+  'eval'                    => array('tl_class'=>'w50 autoheight', 'mandatory'=>true, 'submitOnChange'=>true),
   'reference'               => &$GLOBALS['TL_LANG']['MSC'],
   'sql'                     => "varchar(20) NOT NULL default ''"
 );
@@ -86,6 +86,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['overlay_cookie_expires'] = array (
   'default'                 => 30,
   'exclude'                 => true,
   'inputType'               => 'text',
-  'eval'                    => array('rgxp'=>'natural', 'mandatory'=>true, 'tl_class'=>'w50 clr m12'),
+  'eval'                    => array('rgxp'=>'natural', 'mandatory'=>true, 'tl_class'=>'w50 clr'),
   'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
