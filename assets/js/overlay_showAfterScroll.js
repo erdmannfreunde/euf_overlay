@@ -39,7 +39,8 @@ jQuery(document).ready(function() {
     */
 
   // Cookie initial abfragen
-  if(!readCookie('euf_overlay_closed')) {
+  var intID = $("#euf_overlay").data("moduleid");
+  if(!readCookie('euf_overlay_closed_'+intID)) {
 
     // Verzögerung auslesen
     var triggerPercent = $("#euf_overlay").data("percent");
@@ -48,7 +49,7 @@ jQuery(document).ready(function() {
     $(window).scroll(function (event) {
 
 
-        if(!readCookie('euf_overlay_closed')) {
+        if(!readCookie('euf_overlay_closed_'+intID)) {
           var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 
           if(scrollPercent > triggerPercent) {
@@ -76,11 +77,12 @@ jQuery(document).ready(function() {
   function closeOverlay() {
     // Cookie-Lebenszeit auslesen
     var expires = $("#euf_overlay").data("expires");
+    var intID = $("#euf_overlay").data("moduleid");
 
     // Ausblenden
     $("#euf_overlay").toggle();
     // Cookiesetzen bei CLose
-    createCookie('euf_overlay_closed', '1', expires);
+    createCookie('euf_overlay_closed_'+intID, '1', expires);
   }
 
 });
