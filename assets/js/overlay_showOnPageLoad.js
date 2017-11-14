@@ -38,7 +38,40 @@ jQuery(document).ready(function() {
     * Ende Funktionen für Cookies
     */
 
+  /**
+   * add custom trigger function to fadein and toggle for euf_overlays (overwrite defaults)
+   */
+  var _oldFadeIn = $.fn.fadeIn;
+  $.fn.fadeIn = function(){
+    return _oldFadeIn.apply(this,arguments).trigger("fadeIn");
+  };
 
+  $('#euf_overlay').bind('fadeIn', function () {
+    if(!$('html').hasClass('overlay_opened')) {
+      $('html').addClass('overlay_opened');
+      var scrollTop = $(document).scrollTop();
+      $('html').css('position', 'fixed');
+      $('html').css('width', '100%');
+      $('html').css('top', '-'+scrollTop+'px');
+      $('html').data("scrollTop", scrollTop);
+    }
+  });
+
+  var _oldToggle = $.fn.toggle;
+  $.fn.toggle = function(){
+    return _oldToggle.apply(this,arguments).trigger("toggle");
+  };
+
+  $("#euf_overlay").bind("toggle",function(){
+    if($('html').hasClass('overlay_opened')) {
+      $('html').removeClass('overlay_opened');
+      var scrollTop = $('html').data("scrollTop");
+      $('html').css('position', '');
+      $('html').css('width', '');
+      $('html').css('top', '');
+      $(document).scrollTop(scrollTop);
+    }
+  });
 
   // Cookie initial abfragen
   var intID = $("#euf_overlay").data("moduleid");
