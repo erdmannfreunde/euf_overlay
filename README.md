@@ -13,4 +13,7 @@ Nach der Installation steht ein weiteres Frontend-Modul „EuF-Overlay“ zur Ve
 ## Abhängigkeiten
 Zur Verwendung muss jQuery im Seitenlayout aktiviert sein.
 
+## Bekannte Probleme
+Mootools und jQuery dürfen nicht gleichzeitig im Seitenlayout aktiviert sein. Andernfalls lässt sich das Overlay nicht schließen und es gibt einen Javascript-Fehler in der Console.
+
 *Die Erweiterung wurde von [LAUKIEN](http://www.laukien.de/) beauftragt und finanziert.*
