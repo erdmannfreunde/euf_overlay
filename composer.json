@@ -19,8 +19,8 @@
 	},
 	"require": {
     "php": ">=5.3",
-    "contao/core-bundle": ">=3.5,<=3.5.9999",
-    "contao-community-alliance/composer-plugin":"^2.3.0 || 3.*"
+    "contao/core-bundle": "~3.5 || ~4.4",
+    "contao-community-alliance/composer-plugin":"~2.4 || ~3.0"
   },
   "replace": {
     "contao-legacy/euf_overlay": "self.version"
