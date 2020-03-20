@@ -6,7 +6,7 @@
  * @copyright Erdmann & Freunde
  */
 
-jQuery(document).ready(function($) {
+window.addEventListener("load", function(e) { 
   /**
     * Funktionen für Cookies setzen, auslesen und löschen
     * Source: http://www.quirksmode.org/js/cookies.html#script
