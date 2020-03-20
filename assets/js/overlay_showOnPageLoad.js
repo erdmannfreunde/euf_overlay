@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
       var intID = $("#euf_overlay").data("moduleid");
 
       // Ausblenden
-      $("#euf_overlay").toggle();
+      $("#euf_overlay").fadeOut();
       // Cookiesetzen bei CLose
       createCookie('euf_overlay_closed_'+intID, '1', expires);
     }
