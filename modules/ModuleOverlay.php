@@ -41,11 +41,6 @@ class ModuleOverlay extends \Module
       return $objTemplate->parse();
     }
 
-    if(TL_MODE == 'FE')
-    {
-      $GLOBALS['TL_CSS'][] = 'system/modules/euf_overlay/assets/css/overlay_default.css|static';
-    }
-
     return parent::generate();
   }
 
