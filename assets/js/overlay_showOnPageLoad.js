@@ -101,6 +101,7 @@ jQuery(document).ready(function($) {
 
       // Ausblenden
       $("#euf_overlay").fadeOut();
+      $("#euf_overlay").toggle();
       // Cookiesetzen bei CLose
       createCookie('euf_overlay_closed_'+intID, '1', expires);
     }
