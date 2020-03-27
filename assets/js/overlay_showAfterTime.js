@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
     }, delay * 1000);
 
     // Eventlistener für Close-Button setzen
-    $(".euf_overlay__close").click(function() {
+    $(".euf_overlay__close, .euf_overlay__accept").click(function() {
       closeOverlay();
     });
 

@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
     $("#euf_overlay").fadeIn();
 
     // Eventlistener für Close-Button setzen
-    $(".euf_overlay__close").click(function() {
+    $(".euf_overlay__close, .euf_overlay__accept").click(function() {
       closeOverlay();
     });
 
