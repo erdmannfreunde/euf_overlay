@@ -15,6 +15,7 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['euf_overlay'] = '
   {overlay_richtext_legend},overlay_richtext;
   {overlay_html_legend:hide},overlay_html;
   {overlay_settings_legend},overlay_loadingTime,overlay_cookie_expires;
+  {template_legend:hide},customTpl;
   {expert_legend:hide},cssID
 ';
 

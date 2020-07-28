@@ -1,0 +1,33 @@
+<?php
+
+  if(TL_MODE == 'FE') {
+    // Add the default style sheet
+    $GLOBALS['TL_CSS'][] = 'system/modules/euf_overlay/assets/css/overlay_default.css|static';
+  }
+
+?>
+
+<div id='euf_overlay' class='euf_overlay' data-moduleid='<?php echo $this->id ?>'
+  <?php if ($this->data_delay): ?>data-delay='<?php echo $this->data_delay ?>'<?php endif ?>
+  <?php if ($this->data_percent): ?>data-percent='<?php echo $this->data_percent ?>'<?php endif ?>
+  <?php if ($this->data_expires): ?>data-expires='<?php echo $this->data_expires ?>'<?php endif ?>
+  >
+  <div class='euf_overlay__content <?php echo $this->class ?> block' <?php echo $this->cssID ?>>
+
+    <button class='euf_overlay__close'>
+      &times;
+    </button>
+
+    <?php if ($this->headline): ?>
+      <<?php echo $this->hl ?>><?php echo $this->headline ?></<?php echo $this->hl ?>>
+    <?php endif ?>
+
+    <?php if ($this->overlay_richtext): ?>
+      <?php echo $this->overlay_richtext ?>
+    <?php endif ?>
+
+    <?php if ($this->overlay_html): ?>
+      <?php echo $this->overlay_html ?>
+    <?php endif ?>
+  </div>
+</div>
